@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 100px auto 60px;
+  grid-template-areas: "header" "main" "footer";
+}
+body header {
+  grid-area: header;
+}
+body footer {
+  grid-area: footer;
+}
+body header, body footer {
+  background-color: #19323C;
+  color: #FFF;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+body main {
+  grid-area: main;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ebebeb;
+}
+body .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+body .container .box {
+  height: 100px;
+  width: 150px;
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+body .base {
+  background-color: #19323C;
+  color: #FFF;
+}
+body .important {
+  background-color: #A93F55;
+  color: #FFF;
+}
+body .warning {
+  background-color: #F2545B;
+  color: #19323C;
+}
+body .shadow {
+  box-shadow: 5px 5px 8px #19323C;
+}
+body .primary-font {
+  font-family: "Roboto";
+}
+body .secondary-font {
+  font-family: "Kalam";
+}
+
+/*# sourceMappingURL=main.css.map */

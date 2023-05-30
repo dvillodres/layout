@@ -1,0 +1,104 @@
+@import "mixins";
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Roboto&display=swap');
+
+$baseColor: #19323C;
+$importantColor: #A93F55;
+$warningColor: #F2545B;
+$baseTextColor: #FFF;
+$importantTextColor: #FFF;
+$warningTextColor: $baseColor;
+
+$boxShadow: 5px 5px 8px $baseColor;
+
+$primaryFont: "Roboto";
+$secondaryFont: "Kalam";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primaryFont;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h1 {
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            justify-self: baseline;
+            border-top: 1px solid white;
+            ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @media (max-width: 500px) {
+                    flex-direction: column;
+                    li {
+                        width: 100%;
+                    };
+                }
+
+                li {
+                    flex-grow: 1;
+                    list-style: none;
+                    text-align: center;
+                    background-color: $importantColor;
+                    @include centerElements(0);
+
+                    a {
+                        flex-grow: 1;
+                        text-decoration: none;
+                        color: $importantTextColor;
+                        padding: 10px;
+
+                    }
+                    
+                    &.active{
+                        background-color: $warningColor;
+                        a {
+                            color: $warningTextColor;
+                        }
+                    }
+                    
+                    &:hover{
+                        background-color: $baseColor;
+                        a {
+                            color: $baseTextColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: 20px;
+        @include centerElements(0);
+    }
+
+    header, footer {
+        background-color: $baseColor;
+        color: $baseTextColor;
+    }
+
+    main {
+        min-height: 70vh;
+        background-color: #ebebeb;
+    }
+
+    .primary-font {
+        font-family: $primaryFont;
+    }
+
+    .secondary-font {
+        font-family: $secondaryFont;
+    }
+}

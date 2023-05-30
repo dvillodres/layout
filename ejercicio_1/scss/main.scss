@@ -1,0 +1,66 @@
+@import "mixins", "colors";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px auto 60px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+
+    header {
+        grid-area: header;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    header, footer {
+        background-color: #1e1e1e;
+        color: white;
+        @include centerElements(0);
+    }
+
+    main {
+        grid-area: main;
+        @include centerElements(40px);
+        flex-direction: column;
+        padding: 20px;
+        background-color: #ebebeb;
+    }
+
+    .container {
+        @include centerElements(10px);
+
+        &.red {
+            @include generateColors($red)
+        }
+
+        &.green {
+            @include generateColors($green)
+        }
+
+        &.blue {
+            @include generateColors($blue)
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            color: white;
+            border: 2px solid #5e5e5e;
+            border-radius: 45px 0 45px 0;
+            @include centerElements(10px);
+        }
+    }
+}

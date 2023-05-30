@@ -1,0 +1,32 @@
+$darknesses: darken-4, darken-3, darken-2, darken-1;
+$lightenings: lighten-4, lighten-3, lighten-2, lighten-1;
+
+
+@mixin centerElements($gap) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}
+
+@mixin generateColors($color) {
+    $darkValue: 12;
+    $lightValue: 16;
+    @each $darkness in $darknesses {
+        .box.#{$darkness} {
+            background-color: darken($color, $darkValue);
+        }
+        $darkValue: $darkValue - 3;
+    }
+    
+    @each $lighten in $lightenings {
+        .box.#{$lighten} {
+            background-color: lighten($color, $lightValue);
+        }
+        $lightValue: $lightValue - 4;
+    }
+    .box.base-color {
+        background-color: $color;
+    }
+}

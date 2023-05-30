@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body header h1 {
+  padding: 20px;
+  text-align: center;
+}
+body header nav {
+  justify-self: baseline;
+  border-top: 1px solid white;
+}
+body header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  body header nav ul {
+    flex-direction: column;
+  }
+  body header nav ul li {
+    width: 100%;
+  }
+}
+body header nav ul li {
+  flex-grow: 1;
+  list-style: none;
+  text-align: center;
+  background-color: #A93F55;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+body header nav ul li a {
+  flex-grow: 1;
+  text-decoration: none;
+  color: #FFF;
+  padding: 10px;
+}
+body header nav ul li.active {
+  background-color: #F2545B;
+}
+body header nav ul li.active a {
+  color: #19323C;
+}
+body header nav ul li:hover {
+  background-color: #19323C;
+}
+body header nav ul li:hover a {
+  color: #FFF;
+}
+body footer {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+body header, body footer {
+  background-color: #19323C;
+  color: #FFF;
+}
+body main {
+  min-height: 70vh;
+  background-color: #ebebeb;
+}
+body .primary-font {
+  font-family: "Roboto";
+}
+body .secondary-font {
+  font-family: "Kalam";
+}
+
+/*# sourceMappingURL=main.css.map */

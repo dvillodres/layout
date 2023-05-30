@@ -1,0 +1,102 @@
+@import "mixins";
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Roboto&display=swap');
+
+$baseColor: #19323C;
+$importantColor: #A93F55;
+$warningColor: #F2545B;
+$baseTextColor: #FFF;
+$importantTextColor: #FFF;
+$warningTextColor: $baseColor;
+
+$boxShadow: 5px 5px 8px $baseColor;
+
+$primaryFont: "Roboto";
+$secondaryFont: "Kalam";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primaryFont;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h1 {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+
+    footer {
+        padding: 20px;
+        @include centerElements(0);
+    }
+
+    header, footer {
+        background-color: $baseColor;
+        color: $baseTextColor;
+    }
+
+    main {
+        min-height: 80vh;
+        background-color: #ebebeb;
+        padding: 20px;
+        @include centerElements(20px);
+
+        .card {
+            width: 300px;
+            display: grid;
+            grid-template-rows: 150px auto 50px;
+            gap: 10px;
+            border: 1px solid $baseColor;
+
+            .card-header {
+                background-image: url('../images/image-1.jpg');
+                background-position: center;
+                background-size: cover;
+            }
+
+            .card-body {
+                padding: 0px 15px;
+                display: grid;
+                grid-template-rows: repeat(auto, 3);
+                gap: 15px;
+                p {
+                    font-size: .9em;
+                    &.published-date {
+                        text-align: right;
+                        span {
+                            color: $warningColor;
+                        }
+                    }
+                }
+            }
+
+            .card-footer {
+                padding: 10px;
+                
+                button {
+                    background-color: $warningColor;
+                    color: #FFF;
+                    width: 100%;
+                    border: none;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .primary-font {
+        font-family: $primaryFont;
+    }
+
+    .secondary-font {
+        font-family: $secondaryFont;
+    }
+}

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body header h1 {
+  padding: 20px;
+  text-align: center;
+}
+body footer {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+body header, body footer {
+  background-color: #19323C;
+  color: #FFF;
+}
+body main {
+  min-height: 80vh;
+  background-color: #ebebeb;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body main .card {
+  width: 300px;
+  display: grid;
+  grid-template-rows: 150px auto 50px;
+  gap: 10px;
+  border: 1px solid #19323C;
+}
+body main .card .card-header {
+  background-image: url("../images/image-1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+body main .card .card-body {
+  padding: 0px 15px;
+  display: grid;
+  grid-template-rows: repeat(auto, 3);
+  gap: 15px;
+}
+body main .card .card-body p {
+  font-size: 0.9em;
+}
+body main .card .card-body p.published-date {
+  text-align: right;
+}
+body main .card .card-body p.published-date span {
+  color: #F2545B;
+}
+body main .card .card-footer {
+  padding: 10px;
+}
+body main .card .card-footer button {
+  background-color: #F2545B;
+  color: #FFF;
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+body .primary-font {
+  font-family: "Roboto";
+}
+body .secondary-font {
+  font-family: "Kalam";
+}
+
+/*# sourceMappingURL=main.css.map */

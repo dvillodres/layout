@@ -1,0 +1,79 @@
+@import "mixins.scss", "theme-2";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primaryFont;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px auto 60px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+
+    header {
+        grid-area: header;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    header, footer {
+        background-color: $baseColor;
+        color: $baseTextColor;
+        @include centerElements(0);
+    }
+
+    main {
+        grid-area: main;
+        @include centerElements(40px);
+        flex-direction: column;
+        padding: 20px;
+        background-color: #ebebeb;
+    }
+
+    .container {
+        @include centerElements(10px);
+
+        .box {
+            height: 100px;
+            width: 150px;
+            border-radius: 3px;
+            @include centerElements();
+        }
+    }
+
+    .base {
+        background-color: $baseColor;
+        color: $baseTextColor;
+    }
+
+    .important {
+        background-color: $importantColor;
+        color: $importantTextColor;
+    }
+
+    .warning {
+        background-color: $warningColor;
+        color: $warningTextColor;
+    }
+
+    .shadow {
+        box-shadow: $boxShadow;
+    }
+
+    .primary-font {
+        font-family: $primaryFont;
+    }
+
+    .secondary-font {
+        font-family: $secondaryFont;
+    }
+}
